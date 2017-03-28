@@ -1,22 +1,121 @@
-\documentclass{scrreprt}
+%-----------------------------------
+% Define document and include general packages
+%-----------------------------------
+\documentclass[12pt,oneside,titlepage,listof=totoc,bibliography=totoc]{scrartcl}
 \usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
 \usepackage[ngerman]{babel}
-\author{Martin}
-\title{Exposee}
+\usepackage[babel,german=quotes]{csquotes}
+\usepackage[T1]{fontenc}
+\usepackage{fancyhdr}
+\usepackage{fancybox}
+\usepackage[a4paper, left=4cm, right=2cm, top=2.8cm, bottom=2.3cm]{geometry}
+\usepackage{graphicx}
+\usepackage{colortbl}
+\usepackage{array}
+\usepackage{float}      %Positionierung von Abb. und Tabellen mit [H] erzwingen
+\usepackage{footnote}
+\usepackage{caption}
+\usepackage{enumitem}
+\usepackage{amssymb}
+\usepackage{mathptmx}
+\usepackage{amsmath}
+\usepackage[table]{xcolor}
+\usepackage{marvosym}			% Verwendung von Symbolen, z.B. perfektes Eurozeichen
+\usepackage[colorlinks=true,linkcolor=black]{hyperref}
+% Mehrere Fussnoten nacheinander mit Komma separiert
+\usepackage[hang, multiple]{footmisc}
+
+% todo Aufgaben als Kommentare verfassen für verschiedene Editoren
+\usepackage{todonotes}
+
+%Pakete für Tabellen
+\usepackage{epstopdf}
+\usepackage{nicefrac} % Brüche
+\usepackage{multirow}
+\usepackage{rotating} % vertikal schreiben
+\usepackage{colortbl}
+\usepackage{mdwlist}
+
+% sauber formatierter Quelltext
+\usepackage{listings}
+%-----------------------------------
+% Abkürzungsverzeichnis
+%-----------------------------------
+\usepackage[intoc]{nomencl}
+%-----------------------------------
+% Meta informationen
+%-----------------------------------
+\input{skripte/meta}
+
+%-----------------------------------
+% PDF Meta Daten setzen
+%-----------------------------------
+\hypersetup{
+    pdfinfo={
+        Title={\myTitel},
+        Subject={\myStudiengang},
+        Author={\myAutor},
+        Build=1.1
+    }
+}
 
 
+
+%-----------------------------------
+% Start the document here:
+%-----------------------------------
 
 \begin{document}
 
+\begin{titlepage}
+	\newgeometry{left=2cm, right=2cm, top=2cm, bottom=2cm}
+	\begin{center}
+		\textbf{\myHochschulName}\\
+		\textbf{\myHochschulStandort}\\
+		\vspace{1.5cm}
+			\includegraphics[width=3cm]{abbildungen/fomLogo.jpg} \\
+		\vspace{1.5cm}
+		Berufsbegleitender Studiengang\\
+		\myStudiengang, \mySemesterZahl. Semester\\
+		\vspace{2cm}
+		\textbf{\myThesisArt}\\
+		%\textbf{zur Erlangung des Grades eines}\\
+		%\textbf{\myAkademischerGrad}\\
+		% Oder für Hausarbeiten:
+		\textbf{im Rahmen der Lehrveranstaltung}\\
+		\textbf{\myLehrveranstaltung}\\
+		\vspace{2cm}
+		über das Thema\\
+		\Huge{\myTitel}\\
+		\vspace{0.2cm}
+	\end{center}
+	\normalsize
+	\vfill
+	\begin{tabbing}
+		Links \= Mitte \= Rechts\kill
+		Betreuer: \> \> \myBetreuer\\
+		\> \> \\
 
-\maketitle
+		Autor: \> \> \myAutor\\
+		\> \>  Matrikelnr.: \myMatrikelNr\\
+		\> \> \myAdresse\\
+		\> \> \\
+		Abgabe: \> \> \myAbgabeDatum
+	\end{tabbing}
+\end{titlepage}
 
+%-------Ende Titelseite-------------
 
+\begin{itemize}
 
+\item ein Punkt
 
-SMALL and HAPPY, \\
+\item und noch ein Punkt mit etwas mehr Text, welcher auch in der Zeile umbricht wenn alles gut läuft
 
-is this the truth? You'll never know..
+\item und noch einer
+
+\end{itemize}
+
+Dies ist ein Test, sollte es klappen dann lag es tatsächlich an meiner Dummheit!
 
 \end{document}
