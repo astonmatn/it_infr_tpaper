@@ -1,9 +1,0 @@
-[0] Config.pm:343> INFO - This is Biber 2.5
-[1] Config.pm:346> INFO - Logfile is 'exposee.blg'
-[55] biber-darwin:290> INFO - === Tue Mar 28, 2017, 13:50:31
-[79] Biber.pm:351> INFO - Reading 'exposee.bcf'
-[185] Biber.pm:776> INFO - Found 0 citekeys in bib section 0
-[192] Utils.pm:149> WARN - The file 'exposee.bcf' does not contain any citations!
-[200] bbl.pm:526> INFO - Writing 'exposee.bbl' with encoding 'UTF-8'
-[200] bbl.pm:619> INFO - Output to exposee.bbl
-[200] Biber.pm:108> INFO - WARNINGS: 1

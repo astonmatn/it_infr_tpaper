@@ -60,7 +60,7 @@
 }
 
 
-
+\renewcommand{\familydefault}{\sfdefault}
 %-----------------------------------
 % Start the document here:
 %-----------------------------------
@@ -97,7 +97,7 @@
 		\> \> \\
 
 		Autor: \> \> \myAutor\\
-		\> \>  Matrikelnr.: \myMatrikelNr\\
+		Mat.-Nr.: \> \>  \myMatrikelNr\\
 		\> \> \myAdresse\\
 		\> \> \\
 		Abgabe: \> \> \myAbgabeDatum
@@ -106,16 +106,45 @@
 
 %-------Ende Titelseite-------------
 
-\begin{itemize}
+%-----------------------------------
+% Sperrvermerk
+%-----------------------------------
+%\input{kapitel/anhang/sperrvermerk}
 
-\item ein Punkt
+%-----------------------------------
+% Inhaltsverzeichnis
+%-----------------------------------
+\setcounter{page}{1}
+\tableofcontents
+\newpage
 
-\item und noch ein Punkt mit etwas mehr Text, welcher auch in der Zeile umbricht wenn alles gut läuft
+%-----------------------------------
+% Abkürzungsverzeichnis
+%-----------------------------------
+\printnomenclature
+\newpage
+%-----------------------------------
+% Abbildungsverzeichnis
+%-----------------------------------
+\listoffigures
+\newpage
+%-----------------------------------
+% Tabellenverzeichnis
+%-----------------------------------
+\listoftables
+\newpage
+%-----------------------------------
+% Seitennummerierung auf arabisch und ab 1 beginnend umstellen
+%-----------------------------------
+\pagenumbering{arabic}
+\setcounter{page}{1}
+%-----------------------------------
+% Kapitel / Inhalte
+%-----------------------------------
+\input{kapitel/einleitung/einleitung}
+\input{kapitel/kapitel_1/kapitel_1}
+\input{kapitel/kapitel_2/kapitel_2}
+\input{kapitel/fazit/fazit}
 
-\item und noch einer
-
-\end{itemize}
-
-Dies ist ein Test, sollte es klappen dann lag es tatsächlich an meiner Dummheit!
 
 \end{document}
